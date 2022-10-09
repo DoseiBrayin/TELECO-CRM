@@ -1,8 +1,9 @@
+const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const path = require('path')
-
+require('dotenv').config()
 //Initializations
 const app = express();
 
@@ -19,6 +20,7 @@ app.engine('.hbs', handlebars.engine({
 app.set('view engine', '.hbs')
 
 //Middlewarea
+app.use(cors())
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
