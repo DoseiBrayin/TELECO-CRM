@@ -14,6 +14,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import { IndexAdminComponent } from './index-admin/index-admin.component';
+import { EditAdminComponent } from './edit-admin/edit-admin.component';
+import { RequestAdminComponent } from './request-admin/request-admin.component';
 
 
 
@@ -25,6 +27,8 @@ import { IndexAdminComponent } from './index-admin/index-admin.component';
     RequestUsuarioComponent,
     EditUsuarioComponent,
     IndexAdminComponent,
+    EditAdminComponent,
+    RequestAdminComponent,
     
    
     
