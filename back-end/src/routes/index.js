@@ -15,7 +15,7 @@ router.post('/autenticar',async (req,res)=>{
     try{
     consulta[0].username === req.body.username ? res.json({status : "usuario aceptado"}) : res.json({status : "usuario o contraseña incorrectos"})
     }catch(error){
-        res.status(404).json({Status : "usuario o contraseña incorrectos", errors: error})
+        res.json({Status : "usuario o contraseña incorrectos"})
     }
     })
     

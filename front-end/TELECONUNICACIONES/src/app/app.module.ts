@@ -15,6 +15,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { IndexAdminComponent } from './index-admin/index-admin.component';
 
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -25,10 +28,6 @@ import { IndexAdminComponent } from './index-admin/index-admin.component';
     RequestUsuarioComponent,
     EditUsuarioComponent,
     IndexAdminComponent,
-    
-   
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,11 @@ import { IndexAdminComponent } from './index-admin/index-admin.component';
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSelectModule,MatDialogModule
+    MatSelectModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     BrowserModule,
