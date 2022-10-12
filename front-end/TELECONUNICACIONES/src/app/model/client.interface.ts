@@ -1,4 +1,4 @@
 export interface clientI{
-    usuario:string;
+    username:string;
     password:string;
 }

@@ -11,7 +11,7 @@ import {clientI} from '../../app/model/client.interface'
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    usuario : new FormControl('',Validators.required),
+    username : new FormControl('',Validators.required),
     password : new FormControl('',Validators.required)
   })
 
@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(form:clientI){
+    console.log(form)
     this.api.loginBy(form).subscribe(data =>{
       console.log(data)
     })

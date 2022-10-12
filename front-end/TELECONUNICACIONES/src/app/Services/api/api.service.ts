@@ -17,7 +17,10 @@ export class ApiService {
 
   loginBy(form:clientI):Observable<ResponseI>{
     let dir = this.url + "autenticar"
-    return this.http.post<ResponseI>(dir,from)
+    return this.http.post<ResponseI>(dir,{
+      "username": form.username,
+      "password": form.password
+  })
   }
 
 
