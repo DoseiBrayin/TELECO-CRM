@@ -6,6 +6,7 @@ import { RequestUsuarioComponent} from './request-usuario/request-usuario.compon
 import { EditUsuarioComponent} from './edit-usuario/edit-usuario.component';
 import { IndexAdminComponent} from './index-admin/index-admin.component';
 import { EditAdminComponent} from './edit-admin/edit-admin.component';
+import { RequestAdminComponent} from './request-admin/request-admin.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'index-usuario', component: IndexUsuarioComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'edit-usuario', component: EditUsuarioComponent},
   { path: 'index-admin', component: IndexAdminComponent},
   { path: 'edit-admin', component: EditAdminComponent},
+  { path: 'request-admin', component: RequestAdminComponent},
   
 ];
 

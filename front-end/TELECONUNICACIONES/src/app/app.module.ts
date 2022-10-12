@@ -15,6 +15,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { IndexAdminComponent } from './index-admin/index-admin.component';
 import { EditAdminComponent } from './edit-admin/edit-admin.component';
+import { RequestAdminComponent } from './request-admin/request-admin.component';
 
 
 
@@ -27,6 +28,7 @@ import { EditAdminComponent } from './edit-admin/edit-admin.component';
     EditUsuarioComponent,
     IndexAdminComponent,
     EditAdminComponent,
+    RequestAdminComponent,
     
    
     
