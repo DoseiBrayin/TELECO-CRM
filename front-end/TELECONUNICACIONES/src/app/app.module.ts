@@ -14,8 +14,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import { IndexAdminComponent } from './index-admin/index-admin.component';
-import { EditAdminComponent } from './edit-admin/edit-admin.component';
-import { RequestAdminComponent } from './request-admin/request-admin.component';
 
 
 
@@ -27,8 +25,6 @@ import { RequestAdminComponent } from './request-admin/request-admin.component';
     RequestUsuarioComponent,
     EditUsuarioComponent,
     IndexAdminComponent,
-    EditAdminComponent,
-    RequestAdminComponent,
     
    
     
@@ -40,7 +36,11 @@ import { RequestAdminComponent } from './request-admin/request-admin.component';
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSelectModule,MatDialogModule
+    MatSelectModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     BrowserModule,

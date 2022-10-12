@@ -26,21 +26,21 @@
             <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
     
     
-              <form action="https://formsubmit.co/garciajulian010@gmail.com" method="POST"  id="contactForm" data-sb-form-api-token="API_TOKEN">       
+              <form [formGroup]="petitionForm" (ngSubmit)="onPetition(petitionForm.value)" id="contactForm" >       
     
                 
                     <p>
                       <label for="nombre" class="colocar_nombre">Identification
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="write your identification">
+                        <input type="text" formControlName="client_id" id="nombre" required="obligatorio" placeholder="write your identification">
                     </p>
                   
                     <p>
                       <label for="email" class="colocar_email">Email
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="write your Email">
+                        <input type="email" formControlName="email" id="email" required="obligatorio" placeholder="write your Email">
                     </p>
                 
                   
@@ -48,7 +48,7 @@
                       <label for="mensaje" class="colocar_mensaje">describe your problem
                         <span class="obligatorio">*</span>
                       </label>                     
-                                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="describe your problem"></textarea> 
+                                        <textarea formControlName="des" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="describe your problem"></textarea> 
                                     </p>                    
                   
                     <button type="submit" name="enviar_formulario" id="enviar"><p>Send</p></button>

@@ -63,7 +63,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`petition`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`petition` (
-  `idpettion` VARCHAR(45) NOT NULL,
+  `idpettion` int(10) unsigned ZEROFILL NOT NULL AUTO_INCREMENT,
   `description` VARCHAR(500) NOT NULL,
   `state` VARCHAR(45) NOT NULL,
   `create_time` TIMESTAMP NOT NULL,
@@ -97,7 +97,7 @@ ENGINE = InnoDB;
 
 INSERT INTO `user` (`username`, `email`, `password`, `create_time`) VALUES ('santiagoL22', 'santiagol22@gmail.com', '012345678', current_timestamp());
 INSERT INTO `user` (`username`, `email`, `password`, `create_time`) VALUES ('Andres_zapata', 'andreszapata05@gmail.com', 'abc12345', current_timestamp());
-INSERT INTO `user` (`username`, `email`, `password`, `create_time`) VALUES ('JhonA', 'jhonandresK@hotmail.com', 'asdfghj123', '2022-10-05 13:13:30')
+INSERT INTO `user` (`username`, `email`, `password`, `create_time`) VALUES ('JhonA', 'jhonandresK@hotmail.com', 'asdfghj123', '2022-10-05 13:13:30');
 
 
 INSERT INTO `client` (`idclient`, `client_email`, `direction`, `full_name`) VALUES ('1035442163', 'Andresfelipe82@gmail.com', 'carrera 72 #108-42', 'Andrés Felipe Echeverry M');
@@ -105,19 +105,19 @@ INSERT INTO `client` (`idclient`, `client_email`, `direction`, `full_name`) VALU
 INSERT INTO `client` (`idclient`, `client_email`, `direction`, `full_name`) VALUES ('10352758429', 'RubendiazL@hotmail.com', 'calle 41-b  #94-11', 'Rubén Aguirre Diaz lozano');
 INSERT INTO `client` (`idclient`, `client_email`, `direction`, `full_name`) VALUES ('1000440592', 'carolinasoto20@hotmail.com', 'carrera 33-A #72-65', 'Carolina Soto Pérez');
 
-INSERT INTO `petition` (`idpettion`, `description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('147', 'Petición de solución de errores', 'en espera', '2022-10-05 13:50:20', '428695342', 'web')
-INSERT INTO `petition` (`idpettion`, `description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('234', 'Petición de cancelación de servicio', 'en proceso', '2022-10-05 13:50:31', '1035442163', 'email')
-INSERT INTO `petition` (`idpettion`, `description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('421', 'cancelación de servicio', 'aceptado', current_timestamp(), '1000440592', 'web');
-INSERT INTO `petition` (`idpettion`, `description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('092', 'solución de problemas', 'en proceso', current_timestamp(), '10352758429', 'email');
+INSERT INTO `petition` (`description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('Petición de solución de errores', 'en espera', '2022-10-05 13:50:20', '428695342', 'web');
+INSERT INTO `petition` ( `description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('Petición de cancelación de servicio', 'en proceso', '2022-10-05 13:50:31', '1035442163', 'email');
+INSERT INTO `petition` (`description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('cancelación de servicio', 'aceptado', current_timestamp(), '1000440592', 'web');
+INSERT INTO `petition` (`description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('solución de problemas', 'en proceso', current_timestamp(), '10352758429', 'email');
 
 INSERT INTO `service` (`idservices`, `name_service`, `client_idclient`) VALUES ('42361', 'Duo play', '1035442163');
 INSERT INTO `service` (`idservices`, `name_service`, `client_idclient`) VALUES ('2b4312', 'Duo play', '1000440592');
 INSERT INTO `service` (`idservices`, `name_service`, `client_idclient`) VALUES ('2f51', 'Triple play', '10352758429');
 INSERT INTO `service` (`idservices`, `name_service`, `client_idclient`) VALUES ('824f32', 'Triple play', '428695342');
 
-INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('14a01', 'internet', '2b4312')
-INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('17k42', 'telefonia', '2f51')
-INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('24a36', 'tv', '824f32')
+INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('14a01', 'internet', '2b4312');
+INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('17k42', 'telefonia', '2f51');
+INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('24a36', 'tv', '824f32');
 INSERT INTO `type_service` (`idtype_service`, `service_type`, `service_idservices`) VALUES ('39a17', 'internet', '42361');
 
 SET SQL_MODE=@OLD_SQL_MODE;

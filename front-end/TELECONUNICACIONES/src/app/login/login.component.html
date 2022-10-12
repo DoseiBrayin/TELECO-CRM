@@ -2,19 +2,19 @@
     <head></head>
 <body>
     <img src="../../assets/login.png" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; opacity: 0.75;">
-    <form >
+    <form [formGroup]='loginForm'(ngSubmit)="onLogin(loginForm.value)">
         <div class="login-box">
             <h1>Login</h1> 
 
             <div class="form">
                 <div class="item"> 
                     <i class="fa fa-user-circle" aria-hidden="true"></i>
-                    <input type="text" placeholder="username" name="username" > 
+                    <input type="text" placeholder="username" formControlName = "username" > 
                 </div>
 
                 <div class="item"> 
                     <i class="fa fa-key" aria-hidden="true"></i>
-                    <input type="password" placeholder="password" name="password"> 
+                    <input type="password" placeholder="password" formControlName = "password"> 
                 </div>
 
             </div>

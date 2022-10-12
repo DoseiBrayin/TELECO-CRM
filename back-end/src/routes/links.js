@@ -12,7 +12,7 @@ router.get('/:id',(req,res)=>{
     pool.query(sql,[id],(err,rows,fields)=>{
         if(err) throw err;
         else{
-            if(Object.entries(rows).length === 0) return res.json({"Messages":"Don't found petition for this client"})
+            if(Object.entries(rows).length === 0) return res.json({Status:"Don't found petition for this client"})
             res.json(rows)
         }
     })
@@ -24,7 +24,7 @@ router.get('/client/:id',(req,res)=>{
     pool.query(sql,[id],(err,rows,fields)=>{
         if(err) throw err
         else{
-            if(Object.entries(rows).length === 0) return res.json({"Messages":"Client don't exists"})
+            if(Object.entries(rows).length === 0) return res.json({Status:"Client don't exists"})
             res.json(rows)
         }
     })
@@ -38,10 +38,21 @@ router.put('/client/:id',(req,res)=>{
     pool.query(sql,[email,dir,name,id],(err,rows,fields)=>{
         if(err) throw err
         else{
-            res.json({"messages":"Updating success"})
+            res.json({Status:"Updating success"})
         }
     })
 })
 
+router.post('/client/petition',(req,res)=>{
+    const {client_id,email,des} = req.body
+    let sql = "INSERT INTO `petition` (`description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES (?,'en proceso', current_timestamp(), ?, 'web')"
+    pool.query(sql,[des,client_id],(err,rows,fields)=>{
+        if(err) throw err
+        else{
+            res.json({Status:"Sending petition"})
+        }
+    })
+    
+})
 
 module.exports = router;
