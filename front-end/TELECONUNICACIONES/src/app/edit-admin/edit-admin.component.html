@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<html>
+
+<body>
+    <div class="menu">
+        <div class="user">
+            <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+        </div>
+        <p></p>
+        <ul>
+          <li><a routerLink="/index-admin">Home<i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li class="salir"><a routerLink="/login">Exit<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+        </ul>    
+    </div>
+
+
+
+
+    <div class="contact_form">
+
+        <div class="formulario">      
+          <h1>Edit information</h1>
+          
+    
+    
+              <form method="POST"  id="contactForm" >       
+    
+                
+                    <p>
+                      <label for="nombre" class="colocar_nombre">Name
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="edit your name">
+                    </p>
+                  
+                    <p>
+                      <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="edit your Email">
+                    </p>
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Address
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="edit your address">
+                      </p>
+                      <p>
+                        <label for="nombre" class="colocar_nombre">Phone
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="edit your phone">
+                      </p>
+                                        
+                  
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Send</p></button>
+    
+                              
+                
+              </form>
+        </div>  
+      </div>
+    
+</body>
+
