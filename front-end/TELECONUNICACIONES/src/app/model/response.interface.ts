@@ -1,3 +1,3 @@
 export interface ResponseI{
-    status:""
+    Status:string
 }
