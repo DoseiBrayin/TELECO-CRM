@@ -43,5 +43,9 @@ router.put('/client/:id',(req,res)=>{
     })
 })
 
+router.post('/client/petition',(req,res)=>{
+    const {client_id,email,des} = req.body
+    let sql = "INSERT INTO `petition` (`idpettion`, `description`, `state`, `create_time`, `client_idclient`, `plataform`) VALUES ('147', 'Petición de solución de errores', 'en espera', '2022-10-05 13:50:20', '428695342', 'web')"
+})
 
 module.exports = router;
