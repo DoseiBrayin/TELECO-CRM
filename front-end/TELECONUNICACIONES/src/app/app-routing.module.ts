@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'index-usuario', component: IndexUsuarioComponent },
   { path: 'request-usuario', component: RequestUsuarioComponent},
   { path: 'edit-usuario', component: EditUsuarioComponent},
-  { path: 'index-admin', component: IndexAdminComponent}
+  { path: 'index-admin', component: IndexAdminComponent},
+  
 ];
 
 @NgModule({
