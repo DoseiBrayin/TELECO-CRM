@@ -3,7 +3,7 @@ import {FormGroup,FormControl,Validator, Validators} from '@angular/forms';
 import { PetitionI } from '../model/petition.interface';
 import {ApiService} from '../../app/Services/api/api.service';
 import { ResponseI } from '../model/response.interface';
-
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-request-usuario',
@@ -18,7 +18,7 @@ export class RequestUsuarioComponent implements OnInit {
     des:new FormControl('',Validators.required)
   })
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +26,7 @@ export class RequestUsuarioComponent implements OnInit {
   onPetition(form:PetitionI){
     this.api.petitionBy(form).subscribe(data=>{
       let DataPetition = data;
-      console.log(DataPetition)
+      this.router.navigate(['index-admin'])
     })
   }
 }
