@@ -4,17 +4,19 @@
 <html>
 
 <body>
-   
+
     <div class="menu">
         <div class="user">
             <i class="fa fa-user fa-4x" aria-hidden="true"></i>
         </div>
         <p></p>
         <ul>
-            <li><a routerLink="/request-usuario">Send request<i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
-            <li><a routerLink="/edit-usuario">Edit information <i class="fa fa-address-card" aria-hidden="true"></i></a></li>
+            <li><a routerLink="/request-usuario">Send request<i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+            </li>
+            <li><a routerLink="/edit-usuario">Edit information <i class="fa fa-address-card" aria-hidden="true"></i></a>
+            </li>
             <li class="salir"><a routerLink="/login">Exit<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-        </ul>    
+        </ul>
     </div>
     <table class="content-table">
         <thead>
@@ -25,21 +27,24 @@
                 <th>Create Time</th>
                 <th>Id Client</th>
                 <th>Plataform</th>
-                <th><input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="search" ><button><i class="fa fa-search" aria-hidden="true"></i></button></th>
+                <th>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="search"
+                        #search><button (click)="getPetition(search.value)"><i type="submit" class="fa fa-search"
+                            aria-hidden="true"></i></button>
+                </th>
             </tr>
         </thead>
         <tbody>
-           
+            <tr *ngFor="let p of petitions">
+                <th scope="row">{{p.idpettion}}</th>
+            <td>{{p.description}}</td>
+            <td>{{ p.state }}</td>
+            <td>{{p.create_time}}</td>
+            <td>{{p.client_idclient}}</td>
+            <td>{{p.plataform}}</td>
+            </tr>
         </tbody>
     </table>
 
 
 </body>
-
-
-
-
-
-
-
-

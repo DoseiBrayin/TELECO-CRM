@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { clientI } from '../../model/client.interface'
 import { PetitionI } from '../../model/petition.interface'
 import { ResponseI } from '../../model/response.interface'
+import { PetitionGetI } from '../../model/petitionget.interface'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { from, Observable } from 'rxjs'
 
@@ -11,7 +12,7 @@ import { from, Observable } from 'rxjs'
 })
 export class ApiService {
 
-  url: string = 'http://localhost:4000/';
+  private url: string = 'http://localhost:4000/';
 
   constructor(private http: HttpClient) {
   }
@@ -33,6 +34,10 @@ export class ApiService {
     })
   }
 
+  petitionGet(search : string):Observable<PetitionGetI[]>{
+    let dir = this.url + "links/" + search
+    return this.http.get<PetitionGetI[]>(dir);
+  }
   
 
 }
