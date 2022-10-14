@@ -1,58 +1,58 @@
-<!DOCTYPE html>
+<input id="hamburger" class="hamburger" type="checkbox" />
+<label for="hamburger" class="hamburger">
+    <i></i>
 
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<html>
+</label>
+<nav class="primnav">
+    <ul>
+        <li>
+            <a routerLink="/request-admin">
+                <svg class="icon">
+                    <use xlink:href="#icon-th-large"></use>
+                </svg> Send Request
+            </a>
+        </li>
+        <li>
+            <a routerLink="/edit-admin">
+                <svg class="icon">
+                    <use xlink:href="#icon-th-large"></use>
+                </svg> Edit Information
 
-<body>
-   
-    <div class="menu">
-        <div class="user">
-            <i class="fa fa-user fa-4x" aria-hidden="true"></i>
-        </div>
-        <p></p>
-        <ul>
-            <li><a routerLink="/request-admin">Send request<i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
-            <li><a routerLink="/edit-admin">Edit information <i class="fa fa-address-card" aria-hidden="true"></i></a></li>
-            <li class="salir"><a routerLink="/login">Exit<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+            </a>
+
+        </li>
+
+        <li>
+           <a routerLink="/login">
+                <svg class="icon">
+                    <use xlink:href="#icon-enlarge2"></use>
+                </svg> Exit
+            </a>
+
+        </li>
+    </ul>
+</nav>
 
 
-        </ul>    
-    </div>
-    <table class="content-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Description</th>
-                <th>State</th>
-                <th>Create Time</th>
-                <th>Id Client</th>
-                <th>Plataform</th>
-                <th><input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="search" ><button><i class="fa fa-search" aria-hidden="true"></i></button></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Sara</td>
-                <td>23</td>
-                <td>Ventas a mayoristas</td>
-            </tr>
-            <td>2</td>
-            <td>Ernesto</td>
-            <td>13</td>
-            <td>Cuentas empresariales</td>
-            <tr>
-                <td>3</td>
-                <td>Nuria</td>
-                <td>11</td>
-                <td>Cuentas empresariales</td>
-            </tr>
-        </tbody>
+
+<table class="content-table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>State</th>
+            <th>Create Time</th>
+            <th>Id Client</th>
+            <th>Plataform</th>
+            <th><input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                    placeholder="search"><button><i class="fa fa-search" aria-hidden="true"></i></button></th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
     </table>
-
-
-</body>
-
+    
 
 
 
@@ -60,3 +60,79 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+
+
+
+            <symbol id="icon-enlarge2" viewBox="0 0 32 32">
+                <title>enlarge2</title>
+                <path class="path1" d="M32 0v13l-5-5-6 6-3-3 6-6-5-5zM14 21l-6 6 5 5h-13v-13l5 5 6-6z"></path>
+            </symbol>
+            <symbol id="icon-th-large" viewBox="0 0 30 32">
+                <title>th-large</title>
+                <path class="path1"
+                    d="M13.714 18.286v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286zM13.714 4.571v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286zM29.714 18.286v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286zM29.714 4.571v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286z">
+                </path>
+            </symbol>
+        </defs>
+    </svg>

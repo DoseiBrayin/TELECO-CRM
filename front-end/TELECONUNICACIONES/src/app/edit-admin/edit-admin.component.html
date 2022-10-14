@@ -1,20 +1,37 @@
-<!DOCTYPE html>
+<input id="hamburger" class="hamburger" type="checkbox" />
+<label for="hamburger" class="hamburger">
+    <i></i>
 
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<html>
+</label>
+<nav class="primnav">
+    <ul>
+        <li>
+            <a routerLink="/index-admin">
+                <svg class="icon">
+                    <use xlink:href="#icon-th-large"></use>
+                </svg> Table
+            </a>
+        </li>
+        <li>
+            <a routerLink="/request-admin">
+                <svg class="icon">
+                    <use xlink:href="#icon-th-large"></use>
+                </svg> Send Request
 
-<body>
-    <div class="menu">
-        <div class="user">
-            <i class="fa fa-user fa-4x" aria-hidden="true"></i>
-        </div>
-        <p></p>
-        <ul>
-          <li><a routerLink="/index-admin">Table<i class="fa fa-home" aria-hidden="true"></i></a></li>
-          <li><a routerLink="/request-admin">Send request<i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
-            <li class="salir"><a routerLink="/login">Exit<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-        </ul>    
-    </div>
+            </a>
+
+        </li>
+
+        <li>
+            <a routerLink="/login">
+                <svg class="icon">
+                    <use xlink:href="#icon-enlarge2"></use>
+                </svg> Exit
+            </a>
+
+        </li>
+    </ul>
+</nav>
 
 
 
@@ -64,5 +81,33 @@
         </div>  
       </div>
     
-</body>
 
+
+
+
+
+
+
+
+
+
+
+
+      <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+
+
+
+          <symbol id="icon-enlarge2" viewBox="0 0 32 32">
+              <title>enlarge2</title>
+              <path class="path1" d="M32 0v13l-5-5-6 6-3-3 6-6-5-5zM14 21l-6 6 5 5h-13v-13l5 5 6-6z"></path>
+          </symbol>
+          <symbol id="icon-th-large" viewBox="0 0 30 32">
+              <title>th-large</title>
+              <path class="path1"
+                  d="M13.714 18.286v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286zM13.714 4.571v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286zM29.714 18.286v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286zM29.714 4.571v6.857c0 1.25-1.036 2.286-2.286 2.286h-9.143c-1.25 0-2.286-1.036-2.286-2.286v-6.857c0-1.25 1.036-2.286 2.286-2.286h9.143c1.25 0 2.286 1.036 2.286 2.286z">
+              </path>
+          </symbol>
+      </defs>
+  </svg>
