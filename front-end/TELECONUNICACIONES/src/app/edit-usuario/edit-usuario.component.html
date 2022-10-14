@@ -10,8 +10,8 @@
         </div>
         <p></p>
         <ul>
-          <li><a routerLink="/index-usuario">Home <i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <li><a routerLink="/request-usuario">Send request<i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+          <li><a routerLink="/index-admin">Table <i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a routerLink="/request-usuario">Send Request<i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
             <li class="salir"><a routerLink="/login">Exit<i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
         </ul>    
     </div>
@@ -22,40 +22,48 @@
     <div class="contact_form">
 
         <div class="formulario">      
-          <h1>Edit information</h1>
+          <h1>Edit Information</h1>
           
     
     
-              <form method="POST"  id="contactForm" >       
-    
-                
+              <form method="POST"  id="contactForm" > 
+                <div class="search">      
+                <p>
+                  <label for="search" class="search">Search
+                    
+                    <span class="obligatorio">*</span>
+                  </label>
+                  <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Search" >
+                  <button class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </p>
+                </div>
                     <p>
                       <label for="nombre" class="colocar_nombre">Name
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="edit your name">
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Edit Client Name">
                     </p>
                   
                     <p>
                       <label for="email" class="colocar_email">Email
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="edit your Email">
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Edit Client Email">
                     </p>
                     <p>
                         <label for="nombre" class="colocar_nombre">Address
                           <span class="obligatorio">*</span>
                         </label>
-                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="edit your address">
+                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Edit Client Address">
                       </p>
                       <p>
                         <label for="nombre" class="colocar_nombre">Phone
                           <span class="obligatorio">*</span>
                         </label>
-                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="edit your phone">
+                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Edit Client Phone">
                       </p>
                                         
-                  
+                      <p>* campos obligatorios</p>
                     <button type="submit" name="enviar_formulario" id="enviar"><p>Send</p></button>
     
                               

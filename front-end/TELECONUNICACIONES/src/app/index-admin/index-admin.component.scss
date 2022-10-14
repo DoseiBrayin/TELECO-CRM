@@ -1,7 +1,7 @@
 .menu {
     
-  
-    background-color:#3F51B5;
+  color: #fff;
+    background-color:#0070cc;
     height: 100%; /* Full height */
     position: fixed; /* Make it stick, even on scroll */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
@@ -13,7 +13,7 @@ ul{
 }
 li a {
     display: block;
-    color: #000;
+    color: #fff;
     padding: 8px 0 8px 16px;
     text-decoration: none;
     margin: 5px;
@@ -53,10 +53,10 @@ li a:hover {
 
 
 .content-table thead tr {
-    background-color: #3F51B5;
+    background-color: #0070cc;
     color: #ffffff;
     text-align: middle;
-    border-color: #000;
+    border-color: #fff;
 }
 
 
